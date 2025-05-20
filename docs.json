@@ -96,6 +96,7 @@
         ]
       },
       {
+        "language": "ru",
         "tabs": [
           {
             "tab": "Руководства",
@@ -141,8 +142,56 @@
               }
             ]
           }
-        ],
-        "language": "ru"
+        ]
+      },
+      {
+        "language": "es",
+        "tabs": [
+          {
+            "tab": "Guías",
+            "groups": [
+              {
+                "group": "Comenzar",
+                "pages": [
+                  "es/index",
+                  "es/quickstart",
+                  "es/development"
+                ]
+              },
+              {
+                "group": "Esenciales",
+                "pages": [
+                  "es/essentials/markdown",
+                  "es/essentials/code",
+                  "es/essentials/images",
+                  "es/essentials/settings",
+                  "es/essentials/navigation",
+                  "es/essentials/reusable-snippets"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Referencia de la API",
+            "groups": [
+              {
+                "group": "Documentación de la API",
+                "pages": [
+                  "es/api-reference/introduction"
+                ]
+              },
+              {
+                "group": "Ejemplos de Endpoints",
+                "pages": [
+                  "es/api-reference/endpoint/get",
+                  "es/api-reference/endpoint/create",
+                  "es/api-reference/endpoint/delete",
+                  "es/api-reference/endpoint/webhook"
+                ]
+              }
+            ]
+          }
+        ]
       }
     ]
   },
