@@ -172,10 +172,10 @@
             ]
           },
           {
-            "tab": "Referencia de la API",
+            "tab": "Referencia de API",
             "groups": [
               {
-                "group": "Documentación de la API",
+                "group": "Documentación de API",
                 "pages": [
                   "es/api-reference/introduction"
                 ]
