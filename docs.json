@@ -1,84 +1,17 @@
 {
-  "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
+  "$schema": "https://mintlify.com/docs.json",
   "name": "Mint Starter Kit",
   "colors": {
     "primary": "#16A34A",
     "light": "#07C983",
     "dark": "#15803D"
   },
-  "favicon": "/favicon.svg",
-  "navigation": {
-    "tabs": [
-      {
-        "tab": "Guides",
-        "groups": [
-          {
-            "group": "Get Started",
-            "pages": [
-              "index",
-              "quickstart",
-              "development"
-            ]
-          },
-          {
-            "group": "Essentials",
-            "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/settings",
-              "essentials/navigation",
-              "essentials/reusable-snippets"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "API Reference",
-        "groups": [
-          {
-            "group": "API Documentation",
-            "pages": [
-              "api-reference/introduction"
-            ]
-          },
-          {
-            "group": "Endpoint Examples",
-            "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
-            ]
-          }
-        ]
-      }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Community",
-          "href": "https://mintlify.com/community",
-          "icon": "slack"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
-  },
   "logo": {
     "light": "/logo/light.svg",
     "dark": "/logo/dark.svg"
   },
+  "favicon": "/favicon.svg",
   "navbar": {
     "links": [
       {
@@ -91,6 +24,127 @@
       "label": "Dashboard",
       "href": "https://dashboard.mintlify.com"
     }
+  },
+  "navigation": {
+    "global": {
+      "anchors": [
+        {
+          "anchor": "Documentation",
+          "icon": "book-open-cover",
+          "href": "https://mintlify.com/docs"
+        },
+        {
+          "anchor": "Community",
+          "icon": "slack",
+          "href": "https://mintlify.com/community"
+        },
+        {
+          "anchor": "Blog",
+          "icon": "newspaper",
+          "href": "https://mintlify.com/blog"
+        }
+      ]
+    },
+    "languages": [
+      {
+        "language": "en",
+        "tabs": [
+          {
+            "tab": "Guides",
+            "groups": [
+              {
+                "group": "Get Started",
+                "pages": [
+                  "index",
+                  "quickstart",
+                  "development"
+                ]
+              },
+              {
+                "group": "Essentials",
+                "pages": [
+                  "essentials/markdown",
+                  "essentials/code",
+                  "essentials/images",
+                  "essentials/settings",
+                  "essentials/navigation",
+                  "essentials/reusable-snippets"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "API Reference",
+            "groups": [
+              {
+                "group": "API Documentation",
+                "pages": [
+                  "api-reference/introduction"
+                ]
+              },
+              {
+                "group": "Endpoint Examples",
+                "pages": [
+                  "api-reference/endpoint/get",
+                  "api-reference/endpoint/create",
+                  "api-reference/endpoint/delete",
+                  "api-reference/endpoint/webhook"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tabs": [
+          {
+            "tab": "Руководства",
+            "groups": [
+              {
+                "group": "Начало работы",
+                "pages": [
+                  "ru/index",
+                  "ru/quickstart",
+                  "ru/development"
+                ]
+              },
+              {
+                "group": "Основы",
+                "pages": [
+                  "ru/essentials/markdown",
+                  "ru/essentials/code",
+                  "ru/essentials/images",
+                  "ru/essentials/settings",
+                  "ru/essentials/navigation",
+                  "ru/essentials/reusable-snippets"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Справочник API",
+            "groups": [
+              {
+                "group": "Документация API",
+                "pages": [
+                  "ru/api-reference/introduction"
+                ]
+              },
+              {
+                "group": "Примеры конечных точек",
+                "pages": [
+                  "ru/api-reference/endpoint/get",
+                  "ru/api-reference/endpoint/create",
+                  "ru/api-reference/endpoint/delete",
+                  "ru/api-reference/endpoint/webhook"
+                ]
+              }
+            ]
+          }
+        ],
+        "language": "ru"
+      }
+    ]
   },
   "footer": {
     "socials": {

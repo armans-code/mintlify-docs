@@ -1,0 +1,340 @@
+---
+- title: Глобальные настройки
+- description: Mintlify предоставляет вам полный контроль над внешним видом вашей
+    документации с помощью файла docs.json
+- icon: gear
+---
+
+Каждому сайту Mintlify требуется `docs.json` файл с основными настройками конфигурации. Узнайте больше о [properties](#properties) ниже.
+
+## Properties
+
+<ResponseField name="name" type="string" required>
+  Название вашего проекта. Используется для глобального заголовка.
+
+  Example: `mintlify`
+</ResponseField>
+
+<ResponseField name="navigation" type="Navigation[]" required>
+  Массив групп со всеми страницами внутри этой группы
+
+  <Expandable title="Navigation">
+    <ResponseField name="group" type="string">
+      Название группы.
+
+      Example: `Settings`
+    </ResponseField>
+
+    <ResponseField name="pages" type="string[]">
+      Относительные пути к markdown файлам, которые будут служить страницами.
+
+      Example: `["customization", "page"]`
+    </ResponseField>
+  </Expandable>
+</ResponseField>
+
+<ResponseField name="logo" type="string or object">
+  Путь к изображению логотипа или объект с путями к изображениям логотипа для "светлого" и "темного" режимов
+
+  <Expandable title="Logo">
+    <ResponseField name="light" type="string">
+      Путь к логотипу в светлом режиме
+    </ResponseField>
+
+    <ResponseField name="dark" type="string">
+      Путь к логотипу в темном режиме
+    </ResponseField>
+
+    <ResponseField name="href" type="string" default="/">
+      Куда ведет ссылка при нажатии на логотип
+    </ResponseField>
+  </Expandable>
+</ResponseField>
+
+<ResponseField name="favicon" type="string">
+  Путь к изображению favicon
+</ResponseField>
+
+<ResponseField name="colors" type="Colors">
+  Шестнадцатеричные коды цветов для вашей глобальной темы
+
+  <Expandable title="Colors">
+    <ResponseField name="primary" type="string" required>
+      Основной цвет. Чаще всего используется для выделенного контента, заголовков разделов, акцентов в светлом режиме
+    </ResponseField>
+
+    <ResponseField name="light" type="string">
+      Основной цвет для темного режима. Чаще всего используется для выделенного контента, заголовков разделов, акцентов в темном режиме
+    </ResponseField>
+
+    <ResponseField name="dark" type="string">
+      Основной цвет для важных кнопок
+    </ResponseField>
+
+    <ResponseField name="background" type="object">
+      Цвет фона как в светлом, так и в темном режиме
+
+      <Expandable title="Object">
+        <ResponseField name="light" type="string" required>
+          Шестнадцатеричный код цвета фона в светлом режиме
+        </ResponseField>
+
+        <ResponseField name="dark" type="string" required>
+          Шестнадцатеричный код цвета фона в темном режиме
+        </ResponseField>
+      </Expandable>
+    </ResponseField>
+  </Expandable>
+</ResponseField>
+
+<ResponseField name="topbarLinks" type="TopbarLink[]">
+  Массив `name`s и `url`s ссылок, которые вы хотите включить в верхнюю панель
+
+  <Expandable title="TopbarLink">
+    <ResponseField name="name" type="string">
+      Название кнопки.
+
+      Example: `Contact us`
+    </ResponseField>
+
+    <ResponseField name="url" type="string">
+      URL, на который ведет кнопка при нажатии. Пример: `https://mintlify.com/docs`
+    </ResponseField>
+  </Expandable>
+</ResponseField>
+
+<ResponseField name="topbarCtaButton" type="Call to Action">
+  <Expandable title="Topbar Call to Action">
+    <ResponseField name="type" type={'"link" or "github"'} default="link">
+      Link показывает кнопку. GitHub показывает информацию о репозитории по указанному URL, включая количество звезд на GitHub.
+    </ResponseField>
+
+    <ResponseField name="url" type="string">
+      Если `link`: На что ссылается кнопка.
+
+      Если `github`: Ссылка на репозиторий для загрузки информации с GitHub.
+    </ResponseField>
+
+    <ResponseField name="name" type="string">
+      Текст внутри кнопки. Требуется только если `type` является `link`.
+    </ResponseField>
+  </Expandable>
+</ResponseField>
+
+<ResponseField name="versions" type="string[]">
+  Массив названий версий. Используйте это только если вы хотите показать разные версии документации с выпадающим списком в навигационной панели.
+</ResponseField>
+
+<ResponseField name="anchors" type="Anchor[]">
+  Массив якорей, включает `icon`, `color`, и `url`.
+
+  <Expandable title="Anchor">
+    <ResponseField name="icon" type="string">
+      Иконка [Font Awesome](https://fontawesome.com/search?q=heart), используемая для обозначения якоря.
+
+      Example: `comments`
+    </ResponseField>
+
+    <ResponseField name="name" type="string">
+      Название метки якоря.
+
+      Example: `Community`
+    </ResponseField>
+
+    <ResponseField name="url" type="string">
+      Начало URL, которое определяет, какие страницы входят в якорь. Обычно это название папки, в которую вы помещаете свои страницы.
+    </ResponseField>
+
+    <ResponseField name="color" type="string">
+      Шестнадцатеричный цвет фона иконки якоря. Также может быть градиентом, если вы передаете объект со свойствами `from` и `to`, каждое из которых является шестнадцатеричным цветом.
+    </ResponseField>
+
+    <ResponseField name="version" type="string">
+      Используется, если вы хотите скрыть якорь до выбора правильной версии документации.
+    </ResponseField>
+
+    <ResponseField name="isDefaultHidden" type="boolean" default="false">
+      Передайте `true`, если вы хотите скрыть якорь, пока вы не предоставите прямую ссылку на документацию внутри него.
+    </ResponseField>
+
+    <ResponseField name="iconType" default="duotone" type="string">
+      Одно из: "brands", "duotone", "light", "sharp-solid", "solid", или "thin"
+    </ResponseField>
+  </Expandable>
+</ResponseField>
+
+<ResponseField name="topAnchor" type="Object">
+  Переопределите конфигурации по умолчанию для самого верхнего якоря.
+
+  <Expandable title="Object">
+    <ResponseField name="name" default="Documentation" type="string">
+      Название самого верхнего якоря
+    </ResponseField>
+
+    <ResponseField name="icon" default="book-open" type="string">
+      Иконка Font Awesome.
+    </ResponseField>
+
+    <ResponseField name="iconType" default="duotone" type="string">
+      Одно из: "brands", "duotone", "light", "sharp-solid", "solid", или "thin"
+    </ResponseField>
+  </Expandable>
+</ResponseField>
+
+<ResponseField name="tabs" type="Tabs[]">
+  Массив навигационных вкладок.
+
+  <Expandable title="Tabs">
+    <ResponseField name="name" type="string">
+      Название метки вкладки.
+    </ResponseField>
+
+    <ResponseField name="url" type="string">
+      Начало URL, которое определяет, какие страницы входят во вкладку. Обычно это название папки, в которую вы помещаете свои страницы.
+    </ResponseField>
+  </Expandable>
+</ResponseField>
+
+<ResponseField name="api" type="API">
+  Конфигурация для настроек API. Узнайте больше о страницах API в [API Components](/api-playground/demo).
+
+  <Expandable title="API">
+    <ResponseField name="baseUrl" type="string">
+      Базовый URL для всех конечных точек API. Если `baseUrl` является массивом, это позволит использовать несколько вариантов базового URL, которые пользователь может переключать.
+    </ResponseField>
+
+    <ResponseField name="auth" type="Auth">
+      <Expandable title="Auth">
+        <ResponseField name="method" type="&#x22;bearer&#x22; | &#x22;basic&#x22; | &#x22;key&#x22;">
+          Стратегия аутентификации, используемая для всех конечных точек API.
+        </ResponseField>
+
+        <ResponseField name="name" type="string">
+          Название параметра аутентификации, используемого в API playground.
+
+          Если метод `basic`, формат должен быть `[usernameName]:[passwordName]`
+        </ResponseField>
+
+        <ResponseField name="inputPrefix" type="string">
+          Значение по умолчанию, которое предназначено для использования в качестве префикса для поля ввода аутентификации.
+
+          Например, если `inputPrefix` равно `AuthKey`, то по умолчанию результат ввода в поле аутентификации будет `AuthKey`.
+        </ResponseField>
+      </Expandable>
+    </ResponseField>
+
+    <ResponseField name="playground" type="Playground">
+      Конфигурации для API playground
+
+      <Expandable title="Playground">
+        <ResponseField name="mode" default="show" type="&#x22;show&#x22; | &#x22;simple&#x22; | &#x22;hide&#x22;">
+          Определяет, отображается ли playground, скрыт, или только показывает конечную точку без дополнительной интерактивности пользователя `simple`
+
+          Узнайте больше в [playground guides](/api-playground/demo)
+        </ResponseField>
+      </Expandable>
+    </ResponseField>
+
+    <ResponseField name="maintainOrder" type="boolean">
+      Включение этого флага гарантирует, что порядок ключей на страницах OpenAPI соответствует порядку ключей, определенному в файле OpenAPI.
+
+      <Warning>Это поведение скоро будет включено по умолчанию, после чего это поле будет устаревшим.</Warning>
+    </ResponseField>
+  </Expandable>
+</ResponseField>
+
+<ResponseField name="openapi" type="string | string[]">
+  Строка или массив строк URL(ов) или относительных путей, указывающих на ваш файл OpenAPI.
+
+  Examples:
+
+  <CodeGroup>
+    ```json Absolute
+    "openapi": "https://example.com/openapi.json"
+    ```
+
+    ```json Relative
+    "openapi": "/openapi.json"
+    ```
+
+    ```json Multiple
+    "openapi": ["https://example.com/openapi1.json", "/openapi2.json", "/openapi3.json"]
+    ```
+  </CodeGroup>
+</ResponseField>
+
+<ResponseField name="footerSocials" type="FooterSocials">
+  Объект аккаунтов социальных сетей, где пара ключ:значение представляет платформу социальных сетей и URL аккаунта.
+
+  Example:
+
+  ```json
+  {
+    "x": "https://x.com/mintlify",
+    "website": "https://mintlify.com"
+  }
+  ```
+
+  <Expandable title="FooterSocials">
+    <ResponseField name="[key]" type="string">
+      Одно из следующих значений `website`, `facebook`, `x`, `discord`, `slack`, `github`, `linkedin`, `instagram`, `hacker-news`
+
+      Example: `x`
+    </ResponseField>
+
+    <ResponseField name="property" type="string">
+      URL социальной платформы.
+
+      Example: `https://x.com/mintlify`
+    </ResponseField>
+  </Expandable>
+</ResponseField>
+
+<ResponseField name="feedback" type="Feedback">
+  Конфигурации для включения кнопок обратной связи
+
+  <Expandable title="Feedback">
+    <ResponseField name="suggestEdit" type="boolean" default="false">
+      Включает кнопку, позволяющую пользователям предлагать правки через pull requests
+    </ResponseField>
+
+    <ResponseField name="raiseIssue" type="boolean" default="false">
+      Включает кнопку, позволяющую пользователям сообщать о проблеме с документацией
+    </ResponseField>
+  </Expandable>
+</ResponseField>
+
+<ResponseField name="modeToggle" type="ModeToggle">
+  Настройте переключатель темного режима.
+
+  <Expandable title="ModeToggle">
+    <ResponseField name="default" type={'"light" or "dark"'}>
+      Установите, если вы всегда хотите показывать светлый или темный режим для новых пользователей. Если не установлено, мы по умолчанию используем тот же режим, что и в операционной системе пользователя.
+    </ResponseField>
+
+    <ResponseField name="isHidden" type="boolean" default="false">
+      Установите true, чтобы скрыть переключатель темного/светлого режима. Вы можете комбинировать `isHidden` с `default`, чтобы принудительно использовать только светлый или темный режим для вашей документации. Например:
+
+      <CodeGroup>
+        ```json Only Dark Mode
+        "modeToggle": {
+          "default": "dark",
+          "isHidden": true
+        }
+        ```
+
+        ```json Only Light Mode
+        "modeToggle": {
+          "default": "light",
+          "isHidden": true
+        }
+        ```
+      </CodeGroup>
+    </ResponseField>
+  </Expandable>
+</ResponseField>
+
+<ResponseField name="backgroundImage" type="string">
+  Фоновое изображение, которое будет отображаться за каждой страницей. Смотрите пример с
+  [Infisical](https://infisical.com/docs) и [FRPC](https://frpc.io).
+</ResponseField>

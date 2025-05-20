@@ -1,0 +1,37 @@
+---
+- title: Блоки кода
+- description: Отображение встроенного кода и блоков кода
+- icon: code
+---
+
+## Основы
+
+### Встроенный код
+
+Чтобы обозначить `word` или `phrase` как код, заключите его в обратные кавычки (\`).
+
+```
+To denote a `word` or `phrase` as code, enclose it in backticks (`).
+```
+
+### Блок кода
+
+Используйте [огражденные блоки кода](https://www.markdownguide.org/extended-syntax/#fenced-code-blocks), заключая код в три обратные кавычки и указывая язык программирования вашего фрагмента после начальных кавычек для подсветки синтаксиса. При желании вы также можете написать название вашего кода после языка программирования.
+
+```java HelloWorld.java
+class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+```
+
+````md
+```java HelloWorld.java
+class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+```
+````
