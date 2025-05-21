@@ -1,5 +1,5 @@
 ---
-- title: Глобальные настройки
+- title: Global Settings
 - description: Mintlify предоставляет вам полный контроль над внешним видом вашей
     документации с помощью файла docs.json
 - icon: gear
@@ -60,11 +60,11 @@
 
   <Expandable title="Colors">
     <ResponseField name="primary" type="string" required>
-      Основной цвет. Чаще всего используется для выделенного контента, заголовков разделов, акцентов в светлом режиме
+      Основной цвет. Используется чаще всего для выделенного контента, заголовков разделов, акцентов в светлом режиме
     </ResponseField>
 
     <ResponseField name="light" type="string">
-      Основной цвет для темного режима. Чаще всего используется для выделенного контента, заголовков разделов, акцентов в темном режиме
+      Основной цвет для темного режима. Используется чаще всего для выделенного контента, заголовков разделов, акцентов в темном режиме
     </ResponseField>
 
     <ResponseField name="dark" type="string">
@@ -116,7 +116,7 @@
     </ResponseField>
 
     <ResponseField name="name" type="string">
-      Текст внутри кнопки. Требуется только если `type` является `link`.
+      Текст внутри кнопки. Требуется только если `type` это `link`.
     </ResponseField>
   </Expandable>
 </ResponseField>
@@ -164,7 +164,7 @@
 </ResponseField>
 
 <ResponseField name="topAnchor" type="Object">
-  Переопределите конфигурации по умолчанию для самого верхнего якоря.
+  Переопределите настройки по умолчанию для самого верхнего якоря.
 
   <Expandable title="Object">
     <ResponseField name="name" default="Documentation" type="string">
@@ -200,7 +200,7 @@
 
   <Expandable title="API">
     <ResponseField name="baseUrl" type="string">
-      Базовый URL для всех конечных точек API. Если `baseUrl` является массивом, это позволит использовать несколько вариантов базового URL, которые пользователь может переключать.
+      Базовый URL для всех конечных точек API. Если `baseUrl` является массивом, это позволит использовать несколько вариантов базового URL, между которыми пользователь может переключаться.
     </ResponseField>
 
     <ResponseField name="auth" type="Auth">
@@ -295,11 +295,11 @@
 
   <Expandable title="Feedback">
     <ResponseField name="suggestEdit" type="boolean" default="false">
-      Включает кнопку, позволяющую пользователям предлагать правки через pull requests
+      Включает кнопку, позволяющую пользователям предлагать изменения через pull requests
     </ResponseField>
 
     <ResponseField name="raiseIssue" type="boolean" default="false">
-      Включает кнопку, позволяющую пользователям сообщать о проблеме с документацией
+      Включает кнопку, позволяющую пользователям сообщать о проблеме в документации
     </ResponseField>
   </Expandable>
 </ResponseField>
@@ -313,7 +313,7 @@
     </ResponseField>
 
     <ResponseField name="isHidden" type="boolean" default="false">
-      Установите true, чтобы скрыть переключатель темного/светлого режима. Вы можете комбинировать `isHidden` с `default`, чтобы принудительно использовать только светлый или темный режим для вашей документации. Например:
+      Установите значение true, чтобы скрыть переключатель темного/светлого режима. Вы можете комбинировать `isHidden` с `default`, чтобы принудительно использовать только светлый или темный режим в вашей документации. Например:
 
       <CodeGroup>
         ```json Only Dark Mode
