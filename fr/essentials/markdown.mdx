@@ -1,0 +1,86 @@
+---
+- title: Syntaxe Markdown
+- description: Texte, titre et style en markdown standard
+- icon: text-size
+---
+
+## Titres
+
+Mieux utilisés pour les en-têtes de section.
+
+```md
+## Titles
+```
+
+### Sous-titres
+
+Mieux utilisés pour les en-têtes de sous-section.
+
+```md
+### Subtitles
+```
+
+<Tip>
+  Chaque**titre**et**sous-titre**crée une ancre et apparaît également dans la table des matières à droite.
+</Tip>
+
+## Formatage du texte
+
+Nous prenons en charge la plupart des formatages markdown. Ajoutez simplement`**`,`_`, ou`~`autour du texte pour le formater.
+
+| Style    | Comment l'écrire  | Résultat   |
+| -------- | ----------------- | ---------- |
+| Gras     | `**bold**`        | **gras**   |
+| Italique | `_italic_`        | *italique* |
+| Barré    | `~strikethrough~` | ~~barré~~  |
+
+Vous pouvez les combiner. Par exemple, écrivez`**_bold and italic_**`pour obteni&#x72;***gras et italique***.
+
+Vous devez utiliser HTML pour écrire du texte en exposant et en indice. C'est-à-dire, ajoutez`<sup>`ou`<sub>`autour de votre texte.
+
+| Taille du texte | Comment l'écrire         | Résultat            |
+| --------------- | ------------------------ | ------------------- |
+| Exposant        | `<sup>superscript</sup>` | <sup>exposant</sup> |
+| Indice          | `<sub>subscript</sub>`   | <sub>indice</sub>   |
+
+## Liens vers les pages
+
+Vous pouvez ajouter un lien en entourant le texte de`[]()`. Vous écririez`[link to google](https://google.com)`pour[lien vers google](https://google.com).
+
+Les liens vers les pages de votre documentation doivent être relatifs à la racine. Essentiellement, vous devez inclure tout le chemin du dossier. Par exemple,`[link to text](/writing-content/text)`renvoie à la page "Text" dans notre section composants.
+
+Les liens relatifs comme`[link to text](../text)`s'ouvriront plus lentement car nous ne pouvons pas les optimiser aussi facilement.
+
+## Citations
+
+### Une seule ligne
+
+Pour créer un blockquote, ajoutez un`>` devant un paragraphe.
+
+> Dorothy la suivit à travers de nombreuses belles pièces de son château.
+
+```md
+> Dorothy followed her through many of the beautiful rooms in her castle.
+```
+
+### Multiligne
+
+> Dorothy la suivit à travers de nombreuses belles pièces de son château.
+>
+> La Sorcière lui ordonna de nettoyer les marmites et les bouilloires, de balayer le sol et d'alimenter le feu avec du bois.
+
+```md
+> Dorothy followed her through many of the beautiful rooms in her castle.
+>
+> The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.
+```
+
+### LaTeX
+
+Mintlify prend en charge[LaTeX](https://www.latex-project.org) grâce au composant Latex.
+
+<Latex>8 x (vk x H1 - H2) = (0,1)</Latex>
+
+```md
+<Latex>8 x (vk x H1 - H2) = (0,1)</Latex>
+```

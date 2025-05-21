@@ -123,7 +123,7 @@
             ]
           },
           {
-            "tab": "Справочник API",
+            "tab": "API Reference",
             "groups": [
               {
                 "group": "Документация API",
@@ -159,7 +159,7 @@
                 ]
               },
               {
-                "group": "Esenciales",
+                "group": "Fundamentos",
                 "pages": [
                   "es/essentials/markdown",
                   "es/essentials/code",
@@ -172,10 +172,10 @@
             ]
           },
           {
-            "tab": "Referencia de API",
+            "tab": "Referencia de la API",
             "groups": [
               {
-                "group": "Documentación de API",
+                "group": "Documentación de la API",
                 "pages": [
                   "es/api-reference/introduction"
                 ]
@@ -187,6 +187,55 @@
                   "es/api-reference/endpoint/create",
                   "es/api-reference/endpoint/delete",
                   "es/api-reference/endpoint/webhook"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "language": "fr",
+        "tabs": [
+          {
+            "tab": "Guides",
+            "groups": [
+              {
+                "group": "Commencer",
+                "pages": [
+                  "fr/index",
+                  "fr/quickstart",
+                  "fr/development"
+                ]
+              },
+              {
+                "group": "Essentiels",
+                "pages": [
+                  "fr/essentials/markdown",
+                  "fr/essentials/code",
+                  "fr/essentials/images",
+                  "fr/essentials/settings",
+                  "fr/essentials/navigation",
+                  "fr/essentials/reusable-snippets"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Référence de l'API",
+            "groups": [
+              {
+                "group": "Documentation de l'API",
+                "pages": [
+                  "fr/api-reference/introduction"
+                ]
+              },
+              {
+                "group": "Exemples de points de terminaison",
+                "pages": [
+                  "fr/api-reference/endpoint/get",
+                  "fr/api-reference/endpoint/create",
+                  "fr/api-reference/endpoint/delete",
+                  "fr/api-reference/endpoint/webhook"
                 ]
               }
             ]
