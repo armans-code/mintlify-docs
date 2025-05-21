@@ -1,6 +1,6 @@
 ---
-- title: Изображения и встраиваемые элементы
-- description: Добавление изображений, видео и других HTML-элементов
+- title: Изображения и встраивания
+- description: Добавление изображений, видео и других HTML элементов
 - icon: image
 ---
 
@@ -18,27 +18,27 @@
 
 Обратите внимание, что размер файла изображения должен быть менее 5 МБ. В противном случае мы рекомендуем размещать на сервисе, таком как [Cloudinary](https://cloudinary.com/) или [S3](https://aws.amazon.com/s3/). Затем вы можете использовать этот URL и встроить.
 
-### Использование встраиваемых элементов
+### Использование встраиваний
 
-Для большей настраиваемости изображений вы также можете использовать [встраиваемые элементы](/writing-content/embed) для добавления изображений
+Для большей настраиваемости изображений вы также можете использовать [встраивания](/writing-content/embed) для добавления изображений
 
 ```html
 <img height="200" src="/path/image.jpg" />
 ```
 
-## Встраиваемые элементы и HTML-элементы
+## Встраивания и HTML элементы
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/4KzFe50RQkQ" title="Видеоплеер YouTube" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen style={{ width: '100%', borderRadius: '0.5rem' }} />
 
 <br />
 
 <Tip>
-  Mintlify поддерживает [HTML-теги в Markdown](https://www.markdownguide.org/basic-syntax/#html). Это полезно, если вы предпочитаете HTML-теги синтаксису Markdown, и позволяет создавать документацию с бесконечной гибкостью.
+  Mintlify поддерживает [HTML теги в Markdown](https://www.markdownguide.org/basic-syntax/#html). Это полезно, если вы предпочитаете HTML теги синтаксису Markdown, и позволяет создавать документацию с бесконечной гибкостью.
 </Tip>
 
 ### iFrames
 
-Загружает другую HTML-страницу внутри документа. Чаще всего используется для встраивания видео.
+Загружает другую HTML страницу внутри документа. Чаще всего используется для встраивания видео.
 
 ```html
 <iframe src="https://www.youtube.com/embed/4KzFe50RQkQ"> </iframe>
