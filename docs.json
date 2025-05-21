@@ -159,7 +159,7 @@
                 ]
               },
               {
-                "group": "Esenciales",
+                "group": "Fundamentos",
                 "pages": [
                   "es/essentials/markdown",
                   "es/essentials/code",
@@ -172,10 +172,10 @@
             ]
           },
           {
-            "tab": "Referencia de API",
+            "tab": "Referencia de la API",
             "groups": [
               {
-                "group": "Documentación de API",
+                "group": "Documentación de la API",
                 "pages": [
                   "es/api-reference/introduction"
                 ]
